@@ -1,3 +1,3 @@
-import {letters } from "./letters";
-
-export { letters };
+export * from "./letters";
+export * from "./syllables";
+export * from "./words";
