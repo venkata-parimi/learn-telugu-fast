@@ -22,28 +22,28 @@ export default function FlashcardsPage() {
 
       <button
         onClick={() => setSpeed(1000)}
-        className="bg-blue-500 text-white px-4 py-2 rounded"
+        className="bg-blue-500 text-white px-4 py-2 rounded cursor-pointer hover transition"
       >
         1s
       </button>
 
       <button
         onClick={() => setSpeed(2000)}
-        className="bg-blue-500 text-white px-4 py-2 rounded"
+        className="bg-blue-500 text-white px-4 py-2 rounded cursor-pointer hover transition"
       >
         2s
       </button>
 
       <button
         onClick={() => setSpeed(3000)}
-        className="bg-blue-500 text-white px-4 py-2 rounded"
+        className="bg-blue-500 text-white px-4 py-2 rounded cursor-pointer hover transition"
       >
         3s
       </button>
 
       <button
         onClick={() => setSpeed(5000)}
-        className="bg-blue-500 text-white px-4 py-2 rounded"
+        className="bg-blue-500 text-white px-4 py-2 rounded cursor-pointer hover transition"
       >
         5s
       </button>

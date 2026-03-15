@@ -24,21 +24,21 @@ return ( <div className="flex flex-col items-center justify-center h-screen bg-b
 
     <button
       onClick={() => setSpeed(2000)}
-      className="bg-blue-500 text-white px-4 py-2 rounded"
+      className="bg-blue-500 text-white px-4 py-2 rounded cursor-pointer hover transition"
     >
       2s
     </button>
 
     <button
       onClick={() => setSpeed(4000)}
-      className="bg-blue-500 text-white px-4 py-2 rounded"
+      className="bg-blue-500 text-white px-4 py-2 rounded cursor-pointer hover transition"
     >
       4s
     </button>
 
     <button
       onClick={() => setSpeed(6000)}
-      className="bg-blue-500 text-white px-4 py-2 rounded"
+      className="bg-blue-500 text-white px-4 py-2 rounded cursor-pointer hover transition"
     >
       6s
     </button>
