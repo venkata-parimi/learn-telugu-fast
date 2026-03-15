@@ -1,0 +1,8 @@
+{
+  "name": "learn-telugu-fast",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
