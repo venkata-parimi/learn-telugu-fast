@@ -1,15 +1,3 @@
-const vowels = ["","ా","ి","ీ","ు","ూ","ె","ే","ై","ొ","ో","ౌ"];
+import { generateSyllables } from "./syllableGenerator";
 
-const consonants = [
-"క","ఖ","గ","ఘ",
-"చ","ఛ","జ","ఝ",
-"ట","ఠ","డ","ఢ",
-"త","థ","ద","ధ",
-"ప","ఫ","బ","భ",
-"మ","య","ర","ల",
-"వ","శ","ష","స","హ"
-];
-
-export const syllables = consonants.flatMap(c =>
-vowels.map(v => c + v)
-);
+export const syllables = generateSyllables();

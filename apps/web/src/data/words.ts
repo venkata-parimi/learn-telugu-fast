@@ -1,28 +1,3 @@
-export const confidenceWords = [
-"అల",
-"కల",
-"మన",
-"పల",
-"తల",
-"నల"
-];
+import { wordsLevel1, wordsLevel2, wordsLevel3 } from "@/data/wordsDataset";
 
-export const twoSyllableWords = [
-"అమ్మ",
-"నాన్న",
-"కాకి",
-"పాలు",
-"ఆవు",
-"చెట్టు",
-"పిల్ల",
-"పండు"
-];
-
-export const threeSyllableWords = [
-"పుస్తకం",
-"మనిషి",
-"విద్య",
-"పాఠశాల",
-"సూర్యుడు",
-"చంద్రుడు"
-];
+const allWords = [...wordsLevel1, ...wordsLevel2, ...wordsLevel3];
