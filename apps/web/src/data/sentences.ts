@@ -1,15 +1,11 @@
-export const shortSentences = [
-"అమ్మ వచ్చింది",
-"నాన్న వెళ్లాడు",
-"పిల్ల నవ్వింది",
-"ఆవు వచ్చింది",
-"కాకి ఎగిరింది",
-"చెట్టు పెరిగింది"
-];
+import {
+sentencesLevel1,
+sentencesLevel2,
+sentencesLevel3
+} from "@/data/sentencesDataset";
 
-export const mediumSentences = [
-"అమ్మ పాలు ఇచ్చింది",
-"నాన్న బడి కి వెళ్లాడు",
-"పిల్ల బంతి తో ఆడింది",
-"ఆవు పాలు ఇస్తుంది"
+const allSentences = [
+...sentencesLevel1,
+...sentencesLevel2,
+...sentencesLevel3
 ];

@@ -1,14 +1,22 @@
 "use client";
 
 import { useState } from "react";
-import { confidenceWords, twoSyllableWords, threeSyllableWords } from "@/data/words";
+import {
+    wordsLevel1,
+    wordsLevel2,
+    wordsLevel3
+} from "@/data/wordsDataset";
 import WordCard from "@/components/words/WordCard";
 import ChunkWord from "@/components/words/ChunkWord";
 import { useTimer } from "@/lib/useTimer";
 
 export default function WordsPage() {
 
-    const allWords = [...confidenceWords, ...twoSyllableWords, ...threeSyllableWords];
+    const allWords = [
+        ...wordsLevel1,
+        ...wordsLevel2,
+        ...wordsLevel3
+    ];
 
     const [index, setIndex] = useState(0);
     const [speed, setSpeed] = useState(2000);
