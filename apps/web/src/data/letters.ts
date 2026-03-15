@@ -1,4 +1,4 @@
-[
+export const letters =[
 { "letter": "అ", "type": "vowel" },
 { "letter": "ఆ", "type": "vowel" },
 { "letter": "ఇ", "type": "vowel" },
@@ -34,4 +34,4 @@
 { "letter": "ష", "type": "consonant" },
 { "letter": "స", "type": "consonant" },
 { "letter": "హ", "type": "consonant" }
-]
+];
