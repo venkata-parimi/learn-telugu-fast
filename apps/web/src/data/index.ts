@@ -1,3 +1,3 @@
-import letters from "./letters.json";
+import {letters } from "./letters";
 
 export { letters };
