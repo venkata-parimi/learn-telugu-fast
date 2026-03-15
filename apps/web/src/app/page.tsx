@@ -32,6 +32,11 @@ export default function Home() {
         href="/game"
         color="bg-green-500"
       />
+      <ModuleCard
+        title="Read Sentences"
+        href="/sentences"
+        color="bg-teal-500"
+      />
 
     </div>
 
