@@ -1,35 +1,56 @@
 "use client";
 
 import { useState } from "react";
+import { useTimer } from "@/lib/useTimer";
+import FlashCard from "@/components/flashcards/FlashCard";
+import { letters } from "@/data";
 
-const cards = ["అ", "ఆ", "ఇ", "ఈ", "ఉ", "ఊ"];
-
-export default function Flashcards() {
+export default function FlashcardsPage() {
   const [index, setIndex] = useState(0);
+  const [speed, setSpeed] = useState(2000);
 
-  const speak = () => {
-    const msg = new SpeechSynthesisUtterance(cards[index]);
-    msg.lang = "te-IN";
-    speechSynthesis.speak(msg);
-  };
+  useTimer(() => {
+    setIndex((prev) => (prev + 1) % letters.length);
+  }, speed);
 
-  return (
-    <div className="flex flex-col items-center justify-center h-screen bg-yellow-50">
-      <div className="text-9xl font-bold">{cards[index]}</div>
+  return (<div className="flex flex-col items-center justify-center h-screen bg-yellow-50">
+
+
+    <FlashCard letter={letters[index].letter} />
+
+    <div className="mt-10 flex gap-4">
 
       <button
-        onClick={speak}
-        className="mt-10 bg-blue-500 text-white px-6 py-3 rounded-xl"
+        onClick={() => setSpeed(1000)}
+        className="bg-blue-500 text-white px-4 py-2 rounded"
       >
-        🔊 Listen
+        1s
       </button>
 
       <button
-        onClick={() => setIndex((index + 1) % cards.length)}
-        className="mt-4 bg-green-500 text-white px-6 py-3 rounded-xl"
+        onClick={() => setSpeed(2000)}
+        className="bg-blue-500 text-white px-4 py-2 rounded"
       >
-        Next →
+        2s
       </button>
+
+      <button
+        onClick={() => setSpeed(3000)}
+        className="bg-blue-500 text-white px-4 py-2 rounded"
+      >
+        3s
+      </button>
+
+      <button
+        onClick={() => setSpeed(5000)}
+        className="bg-blue-500 text-white px-4 py-2 rounded"
+      >
+        5s
+      </button>
+
     </div>
+
+  </div>
+
   );
 }
