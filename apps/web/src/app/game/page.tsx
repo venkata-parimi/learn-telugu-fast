@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { wordBuilderLevels } from "@/data/wordBuilder";
 import WordBuilder from "@/components/game/WordBuilder";
+import BackButton from "@/components/layout/BackButton";
 
 export default function GamePage() {
 
@@ -12,7 +13,7 @@ export default function GamePage() {
 
     return (<div className="flex flex-col items-center justify-center h-screen bg-green-50">
 
-
+        <BackButton />
         <h1 className="text-4xl font-bold mb-10">
             Build the Word
         </h1>

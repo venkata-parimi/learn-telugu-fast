@@ -4,6 +4,7 @@ import { useState } from "react";
 import { syllables } from "@/data/syllables";
 import { speak } from "@/lib/tts";
 import { useTimer } from "@/lib/useTimer";
+import BackButton from "@/components/layout/BackButton";
 
 export default function SyllablesPage() {
 
@@ -18,7 +19,7 @@ export default function SyllablesPage() {
 
     return (<div className="flex flex-col items-center justify-center h-screen bg-purple-50">
 
-
+        <BackButton />
         <div className="text-[160px] font-bold text-purple-700">
             {current}
         </div>

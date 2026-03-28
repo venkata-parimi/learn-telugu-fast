@@ -6,6 +6,7 @@ import {
     wordsLevel2,
     wordsLevel3
 } from "@/data/wordsDataset";
+import BackButton from "@/components/layout/BackButton";
 import WordCard from "@/components/words/WordCard";
 import ChunkWord from "@/components/words/ChunkWord";
 import { useTimer } from "@/lib/useTimer";
@@ -28,7 +29,7 @@ export default function WordsPage() {
 
     return (<div className="flex flex-col items-center justify-center h-screen bg-orange-50">
 
-
+        <BackButton />
         {chunkMode ? (
             <ChunkWord word={allWords[index]} />
         ) : (
