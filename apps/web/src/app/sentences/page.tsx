@@ -9,6 +9,7 @@ import {
 
 import SentenceCard from "@/components/sentences/SentenceCard";
 import { useTimer } from "@/lib/useTimer";
+import BackButton from "@/components/layout/BackButton";
 
 export default function SentencesPage() {
 
@@ -28,7 +29,7 @@ export default function SentencesPage() {
     return (<div className="flex flex-col items-center justify-center h-screen bg-blue-50">
 
         <SentenceCard sentence={allSentences[index]} />
-
+        <BackButton />
         <div className="flex gap-4 mt-8">
 
             <button

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTimer } from "@/lib/useTimer";
 import FlashCard from "@/components/flashcards/FlashCard";
 import { letters } from "@/data";
+import BackButton from "@/components/layout/BackButton";
 
 export default function FlashcardsPage() {
   const [index, setIndex] = useState(0);
@@ -17,7 +18,7 @@ export default function FlashcardsPage() {
 
 
     <FlashCard letter={letters[index].letter} />
-
+    <BackButton />
     <div className="mt-10 flex gap-4">
 
       <button

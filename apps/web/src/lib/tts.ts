@@ -1,15 +1,36 @@
-export function speak(text: string) {
+let voices: SpeechSynthesisVoice[] = [];
 
-if (!("speechSynthesis" in window)) {
-console.warn("Speech synthesis not supported");
-return;
+function loadVoices() {
+    voices = speechSynthesis.getVoices();
 }
 
-speechSynthesis.cancel();
+if (typeof window !== "undefined") {
+    loadVoices();
+    speechSynthesis.onvoiceschanged = loadVoices;
+}
 
-const utterance = new SpeechSynthesisUtterance(text);
-utterance.lang = "te-IN";
-utterance.rate = 0.8;
+export function speak(text: string) {
+    if (!("speechSynthesis" in window)) return;
 
-speechSynthesis.speak(utterance);
+    speechSynthesis.cancel();
+
+    const utterance = new SpeechSynthesisUtterance(text);
+
+    // Try Telugu voice first
+    let voice =
+        voices.find(v => v.lang === "te-IN") ||
+        voices.find(v => v.lang.startsWith("te"));
+
+    // Fallback to any voice
+    if (!voice) {
+        voice = voices[0];
+    }
+
+    if (voice) {
+        utterance.voice = voice;
+    }
+
+    utterance.rate = 0.8;
+
+    speechSynthesis.speak(utterance);
 }
